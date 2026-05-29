@@ -225,14 +225,29 @@ def mostrar_producto(productos):
             print("Ingrese un valor valido")
 
 def ver_stock():
-    print(f"{gondola_alcohol}: {gondola_alcohol.mostrar_stock()}")
-    print(f"{gondola_carniceria}: {gondola_carniceria.mostrar_stock()}")
-    print(f"{gondola_galletitas}: {gondola_galletitas.mostrar_stock()}")
-    print(f"{gondola_gaseosa}: {gondola_gaseosa.mostrar_stock()}")
-    print(f"{gondola_golosinas}: {gondola_golosinas.mostrar_stock()}")
-    print(f"{gondola_panaderia}: {gondola_panaderia.mostrar_stock()}")
-    print(f"{gondola_perfumeria}: {gondola_perfumeria.mostrar_stock()}")
-    print(f"{gondola_verduleria}: {gondola_verduleria.mostrar_stock()}")
+    gondola_alcohol.mostrar_stock()
+    print("-----------------")
+
+    gondola_carniceria.mostrar_stock()
+    print("-----------------")
+
+    gondola_galletitas.mostrar_stock()
+    print("-----------------")
+
+    gondola_gaseosa.mostrar_stock()
+    print("-----------------")
+
+    gondola_golosinas.mostrar_stock()
+    print("-----------------")
+
+    gondola_panaderia.mostrar_stock()
+    print("-----------------")
+
+    gondola_perfumeria.mostrar_stock()
+    print("-----------------")
+
+    gondola_verduleria.mostrar_stock()
+    print("-----------------")
 
 def total():
     print("\n===== BOLETA =====")

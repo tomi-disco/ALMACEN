@@ -5,6 +5,7 @@ def menu():
         try:
             mostrar_menu_principal()
             opcion=input("Ingrese a que gondola quiere ir: ")
+            print("\n")
             if opcion.lower()== "a":
                 mostrar_producto(productos_alcohol)
             elif opcion.lower()== "b":
