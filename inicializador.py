@@ -50,9 +50,9 @@ shampoo = Perfumeria(gondola_perfumeria, "007", "Dove", "Shampoo", 400, "ml", 25
 jabon = Perfumeria(gondola_perfumeria, "008", "Rexona", "Jabon", 125, "gr", 1000)
 acondicionador= Perfumeria(gondola_perfumeria, "009", "Dove", "Acondicionador", 400, "ml", 3000)
 
-corona = Alcohol(gondola_alcohol, "010", "", "Corona", 1, 1800)
-quilmes = Alcohol(gondola_alcohol, "011", "", "Quilmes", 1, 1400)
-jagger= Alcohol(gondola_alcohol, "012", "", "Jaggermeister", 1, 2500)
+corona = Alcohol(gondola_alcohol, "010", "Corona", "Corona", 1, 1800)
+quilmes = Alcohol(gondola_alcohol, "011", "Quilmes", "Quilmes", 1, 1400)
+jagger= Alcohol(gondola_alcohol, "012", "Jaggermeister", "Jaggermeister", 1, 2500)
 
 manzana = Verduleria(gondola_verduleria, "013", "Tropical", "Manzana", 1, 1200)
 banana = Verduleria(gondola_verduleria, "014", "Tropical", "Banana", 1, 900)
