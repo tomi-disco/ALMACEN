@@ -203,9 +203,10 @@ def mostrar_producto(productos):
         i+=1
         
     print("0. Volver")
-    opcion=input("Ingrese que producto desea:")
+    
     while True:
         try:
+            opcion=input("Ingrese que producto desea:")
             if opcion=="1":
                 p=producto1._get_gondola()
                 deposito = obtener_deposito(p)
@@ -221,6 +222,10 @@ def mostrar_producto(productos):
                 deposito = obtener_deposito(p)
                 print(carrito.leer_codigo(producto3,producto3._get_gondola(),inventario,almacen,deposito))
                 break
+            elif opcion =="0":
+                break
+            else:
+                print("Ingrese un valor valido")
         except ValueError:
             print("Ingrese un valor valido")
 
