@@ -28,7 +28,7 @@ def menu():
             #     #eliminar
             elif opcion.lower()=="k":
                 total()
-
+                break
 
         except ValueError:
             print("Ingrese una entrada valida.")

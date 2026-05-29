@@ -15,7 +15,7 @@ class Inventario:
                 gondola.agregar(aux)
             else:
                 self.contactar(producto,gondola,deposito)
-                break
+                aux = deposito.eliminar(producto)
 
         #return self._deposito.eliminar(producto)
 

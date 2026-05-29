@@ -158,10 +158,10 @@ def mostrar_menu_principal():
     print("a. Ir a góndola de alcohol (PROMO! 30% en la segunda unidad)")
     print("b. Ir a góndola de carniceria")
     print("c. Ir a góndola de galletitas (PROMO! 2x1 en cualquier marca)")
-    print("d. Ir a góndola de gaseosa")
+    print("d. Ir a góndola de gaseosa (PROMO! 30% en la segunda unidad)")
     print("e. Ir a góndola de golosinas")
-    print("f. Ir a góndola de panaderia (PROMO! Todo al 50%)")
-    print("g. Ir a góndola de perfumeria")
+    print("f. Ir a góndola de panaderia")
+    print("g. Ir a góndola de perfumeria (PROMO! Todo al 50%)")
     print("h. Ir a góndola de verduleria")
     print("i. Ver stock de todas las góndolas")
     #print("j. Ver total del carrito")
@@ -209,17 +209,17 @@ def mostrar_producto(productos):
             if opcion=="1":
                 p=producto1._get_gondola()
                 deposito = obtener_deposito(p)
-                carrito.leer_codigo(producto1,producto1._get_gondola(),inventario,almacen,deposito)
+                print(carrito.leer_codigo(producto1,producto1._get_gondola(),inventario,almacen,deposito))
                 break
             elif opcion=="2":
                 p=producto2._get_gondola()
                 deposito = obtener_deposito(p)
-                carrito.leer_codigo(producto2,producto2._get_gondola(),inventario,almacen,deposito)
+                print(carrito.leer_codigo(producto2,producto2._get_gondola(),inventario,almacen,deposito))
                 break
             elif opcion=="3":
                 p=producto3._get_gondola()
                 deposito = obtener_deposito(p)
-                carrito.leer_codigo(producto3,producto3._get_gondola(),inventario,almacen,deposito)
+                print(carrito.leer_codigo(producto3,producto3._get_gondola(),inventario,almacen,deposito))
                 break
         except ValueError:
             print("Ingrese un valor valido")
@@ -235,11 +235,11 @@ def ver_stock():
     print(f"{gondola_verduleria}: {gondola_verduleria.mostrar_stock()}")
 
 def total():
-    print("\n===== TOTAL A PAGAR =====")
-    print(f"\n Descuentos de galletitas: {almacen.descuento_galletas(carrito)}")
-    print(f"\n Descuentos de bebidas: {almacen.descuento_bebidas(carrito)}")
-    print(f"\n Descuentos de perfumeria: {almacen.descuento_perfumeria(carrito)}")
-    print(almacen.total_a_pagar(carrito))
+    print("\n===== BOLETA =====")
+    print(f"\n Descuentos de galletitas: $ {almacen.descuento_galletas(carrito)}")
+    print(f"\n Descuentos de bebidas: $ {almacen.descuento_bebidas(carrito)}")
+    print(f"\n Descuentos de perfumeria: $ {almacen.descuento_perfumeria(carrito)}")
+    print(f"\n Precio final: ${almacen.total_a_pagar(carrito)}")
 
 
     

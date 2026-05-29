@@ -11,7 +11,7 @@ class Almacen:
         precio_galletas={}
 
         for producto in carrito._get_carro():
-            if producto._get_gondola().lower()=="galletitas":
+            if producto._get_gondola()._nombre_gondola.lower()=="galletitas":
                 cont_galletas[producto._get_nombre().lower()] += 1
                 precio_galletas[producto._get_nombre().lower()] = producto._get_precio()
 
@@ -32,7 +32,7 @@ class Almacen:
         precio_bebidas = {}
 
         for producto in carrito._get_carro():
-            if producto._get_gondola().lower() == "gaseosa" or producto._get_gondola().lower()== "alcohol":
+            if producto._get_gondola()._nombre_gondola.lower() == "gaseosa" or producto._get_gondola()._nombre_gondola.lower()== "alcohol":
                 marca = producto._get_marca().lower()
                 cont_bebidas[marca] += 1
                 precio_bebidas[marca] = producto._get_precio()
@@ -50,7 +50,7 @@ class Almacen:
         descuento=0
 
         for producto in carrito._get_carro():
-            if producto._get_gondola().lower()== "perfumeria":
+            if producto._get_gondola()._nombre_gondola.lower()== "perfumeria":
                 descuento+= producto._get_precio() *0.5
 
         return descuento

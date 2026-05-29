@@ -95,7 +95,9 @@ class Carrito:
             
             
         elif stock_disponible==0:
-            print("No hay stock. Vuelva mas tarde.")
+            print("No hay stock en góndola. Intentando reponer...")
+            inventario.reponer_gondola(producto, gondola, deposito)
+            stock_disponible = gondola._contador[a]
                   
     
     def _get_carro(self):
